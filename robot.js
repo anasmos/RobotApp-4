@@ -82,7 +82,14 @@
       table.appendChild(tr);
       let rowHtml = '';
       for (let col = 0; col < cells.length; col++) {
-        const cell = cells[col] === '.' ? '' : cells[col];
+       // const cell = cells[col] === '.' ? '' : cells[col];
+        let cell=''; 
+        if (cells[col] === '.') {
+           cell = '';
+        } 
+        else {
+           cell = cells[col]; 
+       } 
         rowHtml += `<td>${cell}</td>`;
       }
       tr.innerHTML = rowHtml;
